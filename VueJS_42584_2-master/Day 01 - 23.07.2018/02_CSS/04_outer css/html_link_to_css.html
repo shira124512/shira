@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .c1 {
+            background-color: palegreen;
+        }
+    </style>
+
+    <!-- this is the way to bind an outer css file to current html page-->
+    <link href="styles.css" rel="stylesheet" />
+
+    <style>
+        p{
+            background-color:orangered;
+            opacity:0.9;
+            text-align:center;
+            width:200px;
+            display:inline-block;
+        }
+
+          a{
+            background-color:royalblue;
+            width:200px;
+             display:block;
+        }
+        div{
+            background-color:black;
+            text-align:center;
+        }
+        body{
+            background-color:darksalmon;
+        }
+      #div1{
+            background-color:white;
+      }
+    </style>
+
+</head>
+<body>
+
+    <div id="div1">
+        <p id="p1" class="c1">line 1</p>
+        <p id="p2" style="background-color: orange;">line 2</p>
+        <p id="p3" class="c1">line 3</p>
+        <p>line 4</p>
+        <a>link 1</a>
+    </div>
+    
+</body>
+</html>
