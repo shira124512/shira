@@ -7,12 +7,10 @@
 
         function getReq() {
             let r = Math.floor((Math.random() * 249));
-            /*console.log(`in place: + ${r} + the country is:`);*/
             fetch("https://restcountries.eu/rest/v2/all?fields=name")
                 .then(res => res.json())
                 .then(content => {
                       document.getElementById("h").innerText=`in place: ${r} the country is: ${content[r-1].name}`;
-                     /* console.log(content[r-1].name);*/
                       fetch("https://restcountries.eu/rest/v2/name/"+content[r-1].name) 
                      .then(res => res.json())
                      .then(content => document.getElementById("p").innerText=JSON.stringify(content));});
