@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        a {
+            display: block;
+            background-color:lightgray;
+        }
+
+
+        /*hrefכל תגית שיש לה את המאפיין */ 
+        [href] {
+            color: red;
+        }
+
+        /*והוא שווה לערך סולמית href כל תגית שיש לה את המאפיין */ 
+        [href="#"] {
+            background-color: yellow;
+        }
+
+
+        /* a  ומכיל את הערך  id כל תגית שיש לה את המאפיין */ 
+        a[id*="a"] {
+            border-style: solid;
+            border-width: 3px;
+        }
+
+
+        /* a  ומתחיל עם הערך  id כל תגית שיש לה את המאפיין */ 
+        a[id^="a"] {
+            border-style: dashed;
+        }
+
+        /* 1  ומסתיים עם הערך  id כל תגית שיש לה את המאפיין */ 
+        a[id$="1"] {
+          font-size:2em;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" id="a1">click here</a>
+    <a id="ba1">click me</a>
+    <a href="https://www.facebook.com" id="a2">facebook</a>
+
+
+</body>
+</html>

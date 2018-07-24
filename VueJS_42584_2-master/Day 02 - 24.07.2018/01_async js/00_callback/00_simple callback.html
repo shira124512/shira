@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // callback_1 and callback_2 should be functions
+        function func(callback_1, callback_2) {
+            callback_1(2);
+            callback_2(2);
+        }
+
+
+        func(
+            (num) => {console.log(num)},
+            (num) => {console.log(num ** num)}
+        );
+
+
+        /*
+        OUTPUT:
+        ________________
+        2
+        4
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

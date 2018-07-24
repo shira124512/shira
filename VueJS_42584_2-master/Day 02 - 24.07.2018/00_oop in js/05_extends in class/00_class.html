@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        class Animal {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            getAnimalDescription() {
+                return `name: ${this.name}, age: ${this.age}`;
+            }
+        }
+
+        class Dog extends Animal {
+            constructor(name, age, color) {
+                super(name, age); //super is the base class (Animal)
+                this.color=color;
+            }
+
+             getAnimalDescription() {
+                return super.getAnimalDescription() +`, color: ${this.color}`;
+            }
+        }
+        let animal1 = new Animal("cat", 4);
+        let animal2 = new Dog("test", 3,"black");
+
+
+        console.log(animal1.getAnimalDescription());
+        console.log(animal2.getAnimalDescription());
+
+
+        /*
+        OUTPUT:
+        ________________
+            name: cat, age: 4
+            name: test, age: 3, color: black
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

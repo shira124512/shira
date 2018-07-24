@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let request = new XMLHttpRequest();
+
+
+        //`open` parameters: 
+        // 1) method: string 
+        // 2) url: string,
+        request.open("GET", "https://reqres.in/api/users?delay=3");
+
+       
+       
+        request.onreadystatechange = () => {
+            //if readyState is 4 - the response is back from the server
+            if(request.readyState==4){
+                //show to console the body content of the response
+                console.log(request.response)
+            }
+        };
+
+        request.send();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

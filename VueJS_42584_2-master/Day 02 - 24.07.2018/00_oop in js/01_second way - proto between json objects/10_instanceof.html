@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        /*---------------The instanceof Operator----------------
+        determines whether value has been created by the constructor Constr or a subconstructor. 
+        It does so by checking whether Constr.prototype is in the prototype chain of value.
+        */
+        console.log("{} instanceof Object", {} instanceof Object);  //--> true (Object is constructor of {})
+        console.log("[] instanceof Array", [] instanceof Array);  // --> true (Array is constructor of [])
+        console.log("[] instanceof Object", [] instanceof Object); // --> true (Object is super-constructor of [])
+        console.log("123 instanceof Number", 123 instanceof Number);  //--> false (instanceof is always false for primitive values)
+    
+    
+    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

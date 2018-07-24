@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+
+    /*
+    setTimeout - gets 2 parameters:
+    1. callback function to execute after the ms that are passed as the second param
+    2. ms to wait - a number parameter
+    */
+    setTimeout(
+        ()=>{console.log("I am a callback in setTimeout")}
+        ,500);
+
+
+        console.log("I am a line after the setTimeout");
+
+        /*
+        OUTPUT:
+        ____________________________
+        I am a line after the setTimeout
+        I am a callback in setTimeout
+        */
+</script>
+</head>
+<body>
+    
+</body>
+</html>

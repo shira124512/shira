@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script>
+
+        /*Inheritance---------------------------------------
+        Prototype is based inheritance
+        An object specifies its prototype via the internal property  __proto__  
+        */
+
+        var Person = {
+            describe: function () {console.log('Person named ' + this.name); }
+        };
+
+        var student1 = {
+            __proto__:Person,
+            name: 'Alice',
+           
+        };
+
+        /*Object.create-----------------------------------------
+        Creating a new object with a given prototype
+        Object.create - creates an object whose prototype is the first parameter. 
+        (Optionally, properties can be added via descriptors as a second parameter)
+        */
+        var student2 = Object.create(Person, {
+            name: { value: 'Lara', writable: true },
+            lastName: { value: 'W.', writable: false }
+        });
+        student2.age=18;
+
+        var student3 = Object.create(Person);
+        student3.name = 'Jonathan';
+
+        //Reading the prototype of an object
+        console.log("Object.getPrototypeOf(student3)",Object.getPrototypeOf(student3));
+        console.log("student3.__proto__",student3.__proto__);
+        console.log("student3.__proto__===Person",student3.__proto__===Person);
+
+
+
+        /*
+        OUTPUT:
+        _______________________
+
+        Object.getPrototypeOf(student3) {describe: ƒ}
+        student3.__proto__ {describe: ƒ}
+        student3.__proto__===Person true
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

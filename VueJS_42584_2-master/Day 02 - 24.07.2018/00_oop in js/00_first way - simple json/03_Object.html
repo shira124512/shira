@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script>
+        let collage = {
+            name: 'JB',                 //in this way all the attributes will be true
+            address: 'Tel Aviv',        //in this way all the attributes will be true
+            describe: function () {     //in this way all the attributes will be true
+                return `collage describe name: ${this.name}`;
+            },
+        };
+
+
+        //in this way all the attributes that we did not set will be false
+        Object.defineProperty(collage, 'key1', {
+            value: 456,
+            writable: true
+        });
+
+
+        console.log("address", Object.getOwnPropertyDescriptor(collage, "address"));
+        console.log("key1", Object.getOwnPropertyDescriptor(collage, "key1"));
+
+        //Object.values returns an array of all the enumerable properties
+        console.log("Object.values(collage)", Object.values(collage));
+
+
+        //Object.keys returns an array of all the enumerable properties
+        console.log("Object.keys(collage)", Object.keys(collage));
+
+
+        //JSON.stringify returns a string with all the enumerable properties (without function)
+        console.log("JSON.stringify(collage)", JSON.stringify(collage))
+/*
+
+
+OUTPUT:
+_____________________________________
+address 
+configurable: true
+enumerable: true
+value: "Tel Aviv"
+writable: true
+__proto__: Object
+
+
+key1 
+configurable: false
+enumerable: false
+value: 456
+writable: true
+__proto__: Object
+
+
+Object.values(collage) ["JB", "Tel Aviv", ƒ ()]
+Object.keys(collage) ["name","address","describe"]
+JSON.stringify(collage) {"name":"JB","address":"Tel Aviv"}
+*/
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

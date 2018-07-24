@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <button id="test">click me</button>
+
+    <script>
+          /*
+            getElementById - gets 2 parameters:
+            1. event name - string parameter
+            2. callback function to execute when the event is raised
+         */
+        document.getElementById("test").addEventListener(
+            "click",
+            () => { console.log("I am a callback in an event") });
+    </script>
+</body>
+
+</html>

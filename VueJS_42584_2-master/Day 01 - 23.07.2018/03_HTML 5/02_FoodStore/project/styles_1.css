@@ -1,0 +1,63 @@
+﻿
+#saveOrder,#backOrder, .btn-cart {
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    color: white;
+    display:inline-block;
+    font-size:1em;
+    font-weight: 600;
+    background: -moz-linear-gradient(154deg, rgba(43,43,43,1) 0%, rgba(24,24,24,1) 28%, rgba(0,0,0,0.8) 64%, rgba(0,0,0,0.65) 90%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, rgba(0,0,0,0.65)), color-stop(36%, rgba(0,0,0,0.8)), color-stop(72%, rgba(24,24,24,1)), color-stop(100%, rgba(43,43,43,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(154deg, rgba(43,43,43,1) 0%, rgba(24,24,24,1) 28%, rgba(0,0,0,0.8) 64%, rgba(0,0,0,0.65) 90%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(154deg, rgba(43,43,43,1) 0%, rgba(24,24,24,1) 28%, rgba(0,0,0,0.8) 64%, rgba(0,0,0,0.65) 90%); /* opera 11.10+ */
+    background: linear-gradient(296deg, rgba(43,43,43,1) 0%, rgba(24,24,24,1) 28%, rgba(0,0,0,0.8) 64%, rgba(0,0,0,0.65) 90%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#2B2B2B',GradientType=1 ); /* ie6-9 */
+}
+p{
+    padding-top:15px;
+}
+#saveOrder, #backOrder {
+    width: 650px;
+    font-size: 2em;
+    height: 50px;
+}
+
+.foodItem {
+    background-color: gainsboro;
+    width: 300px;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+.foodWrraper {
+    text-align: center;
+}
+
+h1 {
+    padding-top:20px;
+    font-size:3em;
+    background-color: gainsboro;
+    width: 900px;
+    height:100px;
+    display: inline-block;
+}
+
+.foodImg {
+    width: 270px;
+    height: 100px;
+    background-size: cover;
+    display: inline-block;
+}
+
+#saladImg {
+    background-image: url("images/salad.jfif");
+}
+
+#chipsImg {
+    background-image: url("images/chips.jpg");
+}
+
+#pizzaImg {
+    background-image: url("images/pizza.jpg");
+}

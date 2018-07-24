@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="index.js"> </script>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body onload="displayOrder()">
+
+    <div class="foodWrraper">
+        <h1>Food Store</h1>
+        <hr />
+        <div class="foodItem">
+            <h2>Pizza</h2>
+            <div id="pizzaImg" class="foodImg"></div>
+            <h3>price: 15$</h3>
+            <p class="btn-cart" id="pizzaCnt"></p>
+        </div>
+
+        <div class="foodItem">
+            <h2>Chips</h2>
+            <div id="chipsImg" class="foodImg"></div>
+            <h3>price: 8$</h3>
+            <p class="btn-cart" id="chipsCnt"></p>
+        </div>
+
+        <div class="foodItem">
+            <h2>Salad</h2>
+            <div id="saladImg" class="foodImg"></div>
+            <h3>price: 10$</h3>
+            <p class="btn-cart" id="saladCnt"></p>
+        </div>
+        <hr />
+
+        <button onclick="window.location='HTMLPage.html'" id="backOrder">Back to Menu</button>
+    </div>
+
+</body>
+</html>

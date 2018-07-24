@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        class Animal{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+
+            getAnimalDescription(){
+                return `name: ${this.name}, age: ${this.age}`;
+            }
+        }
+
+
+        let animal1=new Animal("dog",4);
+        let animal2=new Animal("cat",3);
+
+
+        console.log(animal1.getAnimalDescription());
+        console.log(animal2.getAnimalDescription());
+
+
+        /*
+        OUTPUT:
+        ________________
+        name: dog, age: 4
+        name: cat, age: 3
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

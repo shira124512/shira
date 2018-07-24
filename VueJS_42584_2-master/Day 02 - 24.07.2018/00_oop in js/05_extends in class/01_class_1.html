@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        class Animal {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        class Dog extends Animal {
+            constructor(name, age, color) {
+                super(name, age); //super is the base class (Animal)
+                this.color=color;
+            }
+        }
+
+        let animal1 = new Animal("cat", 4);
+        let animal2 = new Dog("test", 3,"black");
+
+        console.log(animal1 instanceof Object);  //true
+        console.log(animal1 instanceof Animal);  //true
+        console.log(animal1 instanceof Dog);  //false
+
+        console.log(animal2 instanceof Object);  //true
+        console.log(animal2 instanceof Animal);  //true
+        console.log(animal2 instanceof Dog);  //true
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

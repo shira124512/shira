@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        function Animal() {
+            this.age = 4;
+        }
+        //every constructor function will be written in Pascal casing
+        function Dog() {
+            this.name = "Test";
+        }
+        Dog.prototype = new Animal();
+
+
+
+        let myDog = new Dog();
+        console.log("myDog.age", myDog.age);
+
+                /*
+                OUTPUT:
+                _____________________________
+                myDog.age 4
+                */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

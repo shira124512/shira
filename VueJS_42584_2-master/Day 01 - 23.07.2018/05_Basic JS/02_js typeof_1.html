@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script>
+
+        //כל משתנה הוא דינמי ויכול להכיל כל פעם טיפוס משתנה אחר
+
+
+        /*
+        סוגי המשתנים:
+        ---------------------
+        primitive:
+
+            -string
+            -boolean
+            -number
+            -undefined
+            -null
+        ---------------------
+        objects:
+        
+            -function
+            -array
+            -custom objects (class etc...)
+        */
+
+
+
+        //---------------------------primitive------------
+        let a1 = 9;
+        document.write(`${typeof (a1)}<br/>`);  //number
+        
+        a1 = "Weekend";
+        document.write(`${typeof (a1)}<br/>`);  //string
+
+        a1 = true;
+        document.write(`${typeof (a1)}<br/>`);  //boolean
+
+        a1 = undefined;
+        document.write(`${typeof (a1)}<br/>`);  //undefined
+
+        a1 = null;
+        document.write(`${typeof (a1)}<br/>`);  //object
+
+
+        //---------------------------objects------------
+        a1 = [1,2,3,4,5];
+        document.write(`${typeof (a1)}<br/>`);  //object
+        
+        a1 = {
+            firstName: "Bob",
+            age:70
+        };
+        document.write(`${typeof (a1)}<br/>`);  //object
+
+        a1 = func1;
+        document.write(`${typeof (a1)}<br/>`);  //function
+
+
+
+        function func1(param) {
+            document.write(`<br/><br/>${param}<br/>`);
+        }
+
+
+        /*
+        two ways to call func1:
+        */
+        func1("called with fumc1");
+        a1("called with a1");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

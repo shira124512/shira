@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        /*****************ארבעה דרכים שונות ליצירת פונקציה בעלת משמעות זהה  - קבלת 2 מספרים והחזרת  מכפלתם**************/
+
+        //דרך ראשונה - יצירת פונקציה בצורה הרגילה
+        function mulNum1(n1, n2) {
+            return n1 * n2;
+        }
+
+
+        //דרך שניה- הצבעה על ידי משתנה לפונקציה קיימת
+        let mulNum2 = mulNum1;
+
+
+        //הצבה של פונקציה אנונימית לתוך משתנה
+        let mulNum3 = function (n1, n2) {
+            return n1 * n2;
+        };
+
+        //הצבה של פונקציה חץ לתוך משתנה
+        let mulNum4 = (n1, n2) => { return n1 * n2; };
+
+        console.log(`mulNum1: ${mulNum1(2, 3)}`);
+        console.log(`mulNum2: ${mulNum2(2, 3)}`);
+        console.log(`mulNum3: ${mulNum3(2, 3)}`);
+        console.log(`mulNum4: ${mulNum4(2, 3)}`);  
+        
+        
+        /*
+        OUTPUT:
+        ____________________________
+
+        mulNum1: 6
+        mulNum2: 6
+        mulNum3: 6
+        mulNum4: 6
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

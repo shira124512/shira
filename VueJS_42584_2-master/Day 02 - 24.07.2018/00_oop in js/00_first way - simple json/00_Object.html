@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let myKey = "schoolName";
+
+        let school = {};
+
+        school.numOfStudents = 200;  //דרך ראשונה להוספת מאפיינים היא על ידי אופרטור הנקודה
+        school["address"] = "Tel Aviv";   //דרך שניה להוספת מאפיינים היא על ידי סוגריים מרובעים
+
+        school[myKey] = "Ort";  //אי אפשר להוסיף מפתח שהוא מאוחסן במשתנה על ידי אופרטור הנקודה       
+        school["teacher name"]="Anna";  //אי אפשר להוסיף מפתח שמכיל תו רווח על ידי אופרטור הנקודה     
+        
+        console.log("school", school);
+
+
+        /*
+        OUTPUT
+        __________________
+        school
+        address: "Tel Aviv"
+        numOfStudents: 200
+        schoolName: "Ort"
+        teacher name: "Anna"
+        __proto__: Object
+        */
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

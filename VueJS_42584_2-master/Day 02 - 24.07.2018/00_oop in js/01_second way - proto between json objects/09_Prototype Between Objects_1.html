@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script>
+        var Person = {
+            describe: function () {console.log('Person named ' + this.name);}
+        };
+
+        var student1 = {
+            __proto__:Person,
+            name: 'Alice',
+           
+        };
+        Object.defineProperty( student1,"lastName", { value: 'W.', enumerable: false });
+
+
+        //check whether a property exists as OwnProperty and not as inherited  
+        console.log("student1.hasOwnProperty('lastName')",student1.hasOwnProperty('lastName'));
+        console.log("student1.hasOwnProperty('')", student1.hasOwnProperty('describe'));
+
+
+        //check whether a property exists as OwnProperty or inherited
+        console.log("'name' in student1", 'name' in student1);
+        console.log("'describe' in student1", 'describe' in student1);
+      
+        
+        //Object.getOwnPropertyNames() - returns the keys of all own properties
+        console.log("Object.getOwnPropertyNames(student1)",Object.getOwnPropertyNames(student1));
+
+
+        //Object.keys() -  returns the keys of all enumerable own properties 
+        console.log("Object.keys(student1)",Object.keys(student1));
+
+
+        //list all enumerable properties (own and inherited)
+        for (i in student1)
+            console.log("i in student1",i);
+
+
+/*
+        OUTPUT:
+        __________________________________
+
+        student1.hasOwnProperty('lastName') true
+        student1.hasOwnProperty('') false
+        'name' in student1 true
+        'describe' in student1 true
+        Object.getOwnPropertyNames(student1) ["name", "lastName"]
+        Object.keys(student1) ["name"]
+        i in student1 name
+        i in student1 describe
+*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>
