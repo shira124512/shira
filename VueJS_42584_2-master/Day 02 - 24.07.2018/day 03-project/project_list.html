@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <ul id="list1"> </ul>
+    <div onload="add" id="d">
+        <script>
+
+            let list = "";
+            let mt = localStorage.getItem("MyTasks");
+            mt = (mt) ? JSON.parse(mt) : [];
+            for (let item in mt) {
+                list +=
+                    `<li><h2>full Name: </h2> ${item.time}</li>
+            <li><h2>age: </h2> ${item.task}</li>`
+            }
+            document.getElementById("list1").innerHTML = list;
+
+
+        </script>
+
+</body>
+
+</html>

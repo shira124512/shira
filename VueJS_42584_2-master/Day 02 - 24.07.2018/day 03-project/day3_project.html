@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My first project in Vue </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+
+
+<body>
+
+    <div id="home">
+    
+        <a v-bind:href="link_to_add">{{btn_add}} </a>
+        <br>
+        <br>
+        <a v-bind:href="link_to_list">{{btn_list}} </a>
+    </div>
+
+    <script>
+
+
+        new Vue({
+            el: '#home',
+            data: {
+                btn_add:"add a task",
+                btn_list:"list of task",
+                link_to_add:"project_add.html",
+                link_to_list:"project_list.html"
+
+            }
+        })
+    </script> 
+
+</body>
+</html>

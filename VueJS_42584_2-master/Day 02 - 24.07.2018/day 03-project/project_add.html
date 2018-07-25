@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <form>
+        <label>date and time</label>
+        <input type="datetime-local" id="dt">
+        <br>
+        <br>
+        <br>
+        <label>the task:</label>
+        <input id="tk" type="text">
+        <br>
+        <br>
+        <br>
+        <div id="add">
+            <button v-on:click="st">{{save}}</button>
+        </div>
+    </form>
+
+
+    <script>
+
+        new Vue({
+            el: '#add',
+            data: {
+                save: 'save.t'
+
+            },
+            methods:
+            {
+                st: function () {
+                    let task = {
+                        time: document.getElementById("dt").value,
+                        task: document.getElementById("tk").value
+                    };
+
+                    let prevtask = localStorage.getItem("MyTasks");
+                    prevtask = (prevtask) ? JSON.parse(prevtask) : [];
+                    prevtask.push(task);
+                    localStorage.setItem("MyTasks", JSON.stringify(prevtask));
+                }
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
